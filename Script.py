@@ -4,7 +4,7 @@ class script(object):
 Nb:- currently bot work progress"""
     HELP_TXT = """hí {} вrσ 🌹"""
     ABOUT_TXT = """• my name: {}
-• creaters: <a href=https://t.me/Abhisheksvlog>༒ᶜʳᵃᶻʸᴮᴼˢˢ卂乃卄丨丂卄乇Ҝ༒</a>, <a href=https://t.me/malayalamvibead>𝓐𝓼𝓲𝓯 𝓹𝓶𝓷🤠</a>
+• creaters: <a href=https://t.me/Abhisheksvlog>༒ᶜʳᵃᶻʸᴮᴼˢˢ卂乃卄丨丂卄乇Ҝ༒</a> and <a href=https://t.me/malayalamvibead>𝓐𝓼𝓲𝓯 𝓹𝓶𝓷🤠</a>
 • library: program 
 • language: Python 𝟹
 • data Base: mangoDB
