@@ -654,7 +654,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        k = await message.reply_photo(photo=poster, caption=cap)
+        k = await message.reply_text(text=cap)
         cap = "⏳️"
         await asyncio.sleep(3)
         await k.delete()    
