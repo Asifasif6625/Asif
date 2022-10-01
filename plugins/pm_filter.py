@@ -654,8 +654,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        k = await message.reply_text(text=cap)
-        cap = "⏳️"
+        k = await message.reply_text('⏳️')
         await asyncio.sleep(3)
         await k.delete()    
         cap = f"<b><i>Movie Name : {search}\nRequested By : {message.from_user.mention}\nGroup : {message.chat.title}</i></b>"
