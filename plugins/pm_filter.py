@@ -343,12 +343,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             f_caption=f_caption
         if f_caption is None:
             f_caption = f"{files.file_name}"
-        btn.append = [
-                       [
-                        InlineKeyboardButton('close this file \n⚠️copyright⚠️', callback_data='close_data')
-                    ]
-                    ]
-            
+        buttons = [[                    
+             InlineKeyboardButton('close this file \n⚠️copyright⚠️', callback_data='close_data')                    
+        ]]           
         try:
             if AUTH_CHANNEL and not await is_subscribed(client, query):
                 await query.answer(url=f"https://t.me/{temp.U_NAME}?start={file_id}")
@@ -390,11 +387,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f_caption=f_caption
         if f_caption is None:
             f_caption = f"{title}"
-        btn.append = [
-                       [
-                        InlineKeyboardButton('close this file \n⚠️copyright⚠️', callback_data='close_data')
-                    ]
-                    ]
+        buttons = [[                 
+             InlineKeyboardButton('close this file \n⚠️copyright⚠️', callback_data='close_data')              
+        ]] 
         await query.answer()
         await client.send_cached_media(
             chat_id=query.from_user.id,
