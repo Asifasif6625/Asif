@@ -343,6 +343,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
             f_caption=f_caption
         if f_caption is None:
             f_caption = f"{files.file_name}"
+        buttons = [
+                    [
+                        InlineKeyboardButton('close this file \n⚠️copyright⚠️', callback_data='close_data')
+                    ]
+                    ]
             
         try:
             if AUTH_CHANNEL and not await is_subscribed(client, query):
