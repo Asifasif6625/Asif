@@ -343,8 +343,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             f_caption=f_caption
         if f_caption is None:
             f_caption = f"{files.file_name}"
-        buttons = [
-                    [
+        btn.append = [
+                       [
                         InlineKeyboardButton('close this file \n⚠️copyright⚠️', callback_data='close_data')
                     ]
                     ]
@@ -390,6 +390,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f_caption=f_caption
         if f_caption is None:
             f_caption = f"{title}"
+        btn.append = [
+                       [
+                        InlineKeyboardButton('close this file \n⚠️copyright⚠️', callback_data='close_data')
+                    ]
+                    ]
         await query.answer()
         await client.send_cached_media(
             chat_id=query.from_user.id,
