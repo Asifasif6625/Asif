@@ -413,6 +413,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ],[
             InlineKeyboardButton('× ᴄʟᴏꜱᴇ ᴍꜱɢ ×', callback_data='close_data')
         ]]
+        k = await message.reply_sticker('CAACAgIAAxkBAAEqGV5jPSz6k7PS8dJupiDuTzloCFD7lAAC2BEAAo-jyEu9EaUKcvRilB4E')
+        await asyncio.sleep(3)
+        await k.delete()
         reply_markup = InlineKeyboardMarkup(buttons)      
         await query.message.edit_text(
             text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
@@ -431,6 +434,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('• ɢᴏ ʙᴀᴄᴋ •', callback_data='start'),
             InlineKeyboardButton('• ꜱᴛᴏʀᴀɢᴇ ꜱᴛᴀᴛᴜꜱ •', callback_data='stats')
         ]] 
+        k = await message.reply_sticker('CAACAgIAAxkBAAEqGV5jPSz6k7PS8dJupiDuTzloCFD7lAAC2BEAAo-jyEu9EaUKcvRilB4E')
+        await asyncio.sleep(3)
+        await k.delete()
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.HELP_TXT.format(query.from_user.mention),
@@ -444,6 +450,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('• ʜᴏᴍᴇ •', callback_data='start'),
             InlineKeyboardButton('× ᴄʟᴏꜱᴇ ᴍꜱɢ ×', callback_data='close_data')
         ]]
+        k = await message.reply_sticker('CAACAgIAAxkBAAEqGV5jPSz6k7PS8dJupiDuTzloCFD7lAAC2BEAAo-jyEu9EaUKcvRilB4E')
+        await asyncio.sleep(3)
+        await k.delete()
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.ABOUT_TXT.format(temp.B_NAME),
@@ -538,6 +547,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('<< ʙᴀᴄᴋ', callback_data='help'),
             InlineKeyboardButton('ꪶ ʀᴇꜰʀᴇꜱʜ ꪶ', callback_data='rfrsh')
         ]]
+        k = await message.reply_sticker('CAACAgIAAxkBAAEqGV5jPSz6k7PS8dJupiDuTzloCFD7lAAC2BEAAo-jyEu9EaUKcvRilB4E')
+        await asyncio.sleep(3)
+        await k.delete()
         reply_markup = InlineKeyboardMarkup(buttons)
         total = await Media.count_documents()
         users = await db.total_users_count()
