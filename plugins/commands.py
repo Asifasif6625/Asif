@@ -77,7 +77,6 @@ async def start(client, message):
         await message.reply_photo('https://telegra.ph/file/87080709ff75e98ee41b0.jpg') 
         await client.send_message(
             chat_id=message.from_user.id,
-            photo="https://telegra.ph/file/87080709ff75e98ee41b0.jpg", 
             text="**𝑱𝒐𝒊𝒏 𝑶𝒖𝒓 𝑴𝒐𝒗𝒊𝒆 𝑼𝒑𝒅𝒂𝒕𝒆𝒔 𝑪𝒉𝒂𝒏𝒏𝒆𝒍 𝑻𝒐 𝑼𝒔𝒆 𝑶𝒖𝒓 𝑩𝒐𝒕!**",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode="markdown"
