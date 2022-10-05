@@ -74,7 +74,7 @@ async def start(client, message):
 
         if message.command[1] != "subscribe":
             btn.append([InlineKeyboardButton("• ᕼY ᗷᖇO TᖇY ᗩGᗩIᑎ •", callback_data=f"checksub#{message.command[1]}")])
-        await message.reply_text('🤨') 
+        await message.reply_sticker('CAACAgIAAxkBAAEqKrNjPVmzRfTihfc-850ZmMxcJ2ugcwACrgAD9wLID1_vtWxyDS0cHgQ') 
         await client.send_message(
             chat_id=message.from_user.id,
             text="**𝑱𝒐𝒊𝒏 𝑶𝒖𝒓 𝑴𝒐𝒗𝒊𝒆 𝑼𝒑𝒅𝒂𝒕𝒆𝒔 𝑪𝒉𝒂𝒏𝒏𝒆𝒍 𝑻𝒐 𝑼𝒔𝒆 𝑶𝒖𝒓 𝑩𝒐𝒕!**",
@@ -97,6 +97,9 @@ async def start(client, message):
             ],[
             InlineKeyboardButton('× ᴄʟᴏꜱᴇ ᴍꜱɢ ×', callback_data='close_data')
         ]]
+        k = await message.reply_sticker('CAACAgIAAxkBAAEqGV5jPSz6k7PS8dJupiDuTzloCFD7lAAC2BEAAo-jyEu9EaUKcvRilB4E')
+        await asyncio.sleep(3)
+        await k.delete()
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
             photo=random.choice(PICS),
