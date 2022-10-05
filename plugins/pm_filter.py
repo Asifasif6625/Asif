@@ -422,6 +422,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
+    else:
+        await msg.message.delete()
     elif query.data == "help":
         buttons = [[
             InlineKeyboardButton('• ᴍᴀɴᴜᴇʟ ꜰɪʟᴛᴇʀ •', callback_data='manuelfilter'),
