@@ -665,7 +665,7 @@ async def auto_filter(client, msg, spoll=False):
         k = await message.reply_sticker('CAACAgIAAxkBAAEqKjBjPVjb0Pn-ZfCeSSUImGoXSYh7eQACbQADO2AkFMwBd0tfTU9aHgQ')
         await asyncio.sleep(3)
         await k.delete()    
-        cap = f"<b><i>♀️Movie Name : {search}\n♂️Requested By : {message.from_user.mention}\n🌈Group : {message.chat.title}</i></b>"
+        cap = f"<b><i>🎉movie poster : not available \n♀️Movie Name : {search}\n♂️Requested By : {message.from_user.mention}\n🌈Group : {message.chat.title} \n💐release date : {release date} \n🎁story : {plot}</i></b>"
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
