@@ -74,10 +74,10 @@ async def start(client, message):
 
         if message.command[1] != "subscribe":
             btn.append([InlineKeyboardButton("• ᕼY ᗷᖇO TᖇY ᗩGᗩIᑎ •", callback_data=f"checksub#{message.command[1]}")])
-        await message.reply_photo('https://telegra.ph/file/f9be26742f6517f2f2f1c.jpg') 
+        await message.reply_photo('https://telegra.ph/file/684c2e364354bbd6a91e2.jpg') 
         await client.send_message(
             chat_id=message.from_user.id,
-            text="**𝑱𝒐𝒊𝒏 𝑶𝒖𝒓 𝑴𝒐𝒗𝒊𝒆 𝑼𝒑𝒅𝒂𝒕𝒆𝒔 𝑪𝒉𝒂𝒏𝒏𝒆𝒍 𝑻𝒐 𝑼𝒔𝒆 𝑶𝒖𝒓 𝑩𝒐𝒕!**",
+            text="‎ ",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode="markdown"
             )
