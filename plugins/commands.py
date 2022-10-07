@@ -48,7 +48,7 @@ async def start(client, message):
             InlineKeyboardButton('× ᴄʟᴏꜱᴇ ᴍꜱɢ ×', callback_data='close_data')
         ]]
         k = await message.reply_sticker('CAACAgUAAxkBAAEqRiNjPomDu86ZI2qy6FMNcqMgHZ1JvAACJwcAAq6S8FUnK-VwEVHHUB4E')
-        await asyncio.sleep(3)
+        await asyncio.sleep(2)
         await k.delete()
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -74,7 +74,7 @@ async def start(client, message):
 
         if message.command[1] != "subscribe":
             btn.append([InlineKeyboardButton("• ᕼY ᗷᖇO TᖇY ᗩGᗩIᑎ •", callback_data=f"checksub#{message.command[1]}")])
-        await message.reply_photo('https://telegra.ph/file/b5fe0ca94211ad0307ae0.jpg') 
+        await message.reply_photo('https://telegra.ph/file/b5fe0ca94211ad0307ae0.jpg, https://telegra.ph/file/f9be26742f6517f2f2f1c.jpg') 
         await client.send_message(
             chat_id=message.from_user.id,
             text="**𝑱𝒐𝒊𝒏 𝑶𝒖𝒓 𝑴𝒐𝒗𝒊𝒆 𝑼𝒑𝒅𝒂𝒕𝒆𝒔 𝑪𝒉𝒂𝒏𝒏𝒆𝒍 𝑻𝒐 𝑼𝒔𝒆 𝑶𝒖𝒓 𝑩𝒐𝒕!**",
