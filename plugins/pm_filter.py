@@ -414,7 +414,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('× ᴄʟᴏꜱᴇ ᴍꜱɢ ×', callback_data='close_data')
         ]]
         k = await message.reply_sticker('CAACAgUAAxkBAAEqRiNjPomDu86ZI2qy6FMNcqMgHZ1JvAACJwcAAq6S8FUnK-VwEVHHUB4E')
-        await asyncio.sleep(3)
+        await asyncio.sleep(2)
         await k.delete()
         reply_markup = InlineKeyboardMarkup(buttons)      
         await query.message.edit_text(
