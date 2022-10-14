@@ -1,7 +1,6 @@
 class script(object):
     START_TXT = """hí {} вrσ 🌹
-í αm вєѕt αutσ fíltєr вσt 😊\n\n
-Nb:- currently bot work progress"""
+í αm вєѕt αutσ fíltєr вσt 😊"""
     HELP_TXT = """hí {} вrσ 🌹"""
     ABOUT_TXT = """• my name: {}
 • creaters: <a href=https://t.me/Abhisheksvlog>༒ᶜʳᵃᶻʸᴮᴼˢˢ卂乃卄丨丂卄乇Ҝ༒</a> and <a href=https://t.me/malayalamvibead>𝓐𝓼𝓲𝓯 𝓹𝓶𝓷🤠</a>
@@ -10,11 +9,8 @@ Nb:- currently bot work progress"""
 • data Base: mangoDB
 • bot server: 💋"""
 
-    PRIVATEBOT_TXT = """<b>𝙿𝚁𝙸𝚅𝙰𝚃𝙴 𝙱𝙾𝚃 𝙵𝙾𝚁 𝚈𝙾𝚄</b>
-<b>›› 𝙳𝙾 𝚈𝙾𝚄 𝚆𝙰𝙽𝚃 𝙰 𝙱𝙾𝚃 𝚂𝙰𝙼𝙴 𝙻𝙸𝙺𝙴 𝚃𝙷𝙸𝚂</b>
-<b>›› 𝚆𝙸𝚃𝙷 𝙰𝙻𝙻 𝚈𝙾𝚄𝚁 𝙲𝚁𝙴𝙳𝙸𝚃𝚂</b>
-<b>›› 𝚆𝙸𝚃𝙷 𝚈𝙾𝚄𝚁 𝙾𝚆𝙽𝙴𝚁𝚂𝙷𝙸𝙿</b>
-<b>›› 𝙲𝙾𝙽𝚃𝙰𝙲𝚃 𝙼𝙴 <a href=https://t.me/AboutAadhi>𝙰𝙰𝙳𝙷𝙸</a></b>"""
+    PRIVATEBOT_TXT = """<b>ഞാൻ ബാല എന്താണ് സ്റ്റാർട്ട്‌ അടിച്ച് കളിക്കണ്
+ദിസ്‌ ഈസ്‌ റാങ്..🪝</b>"""
 
     SOURCE_TXT = """<b>Donation</b>
 
