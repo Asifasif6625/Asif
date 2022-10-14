@@ -735,7 +735,7 @@ async def advantage_spell_chok(msg):
     k = await msg.reply("ᴄʜᴇᴄᴋ yᴏᴜʀ ᴍᴏᴠɪᴇ ᴀɴᴅ ᴄʟɪᴄᴋ ʙᴜᴛᴛᴏɴ 👍", reply_markup=InlineKeyboardMarkup(btn))
     await asyncio.sleep(200)
     await k.delete()
-
+    return
 async def manual_filters(client, message, text=False):
     group_id = message.chat.id
     name = text or message.text
