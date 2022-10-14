@@ -89,7 +89,7 @@ async def next_page(bot, query):
             [InlineKeyboardButton("<< 𝚋𝚊𝚌𝚔", callback_data=f"next_{req}_{key}_{off_set}"), InlineKeyboardButton(f"𝚙𝚊𝚐𝚎 \n{round(int(offset)/10)+1} / {round(total/10)}", callback_data="pages")]
         )
     elif off_set is None:
-        btn.append([InlineKeyboardButton(f"𝚙𝚊𝚐𝚎 \n{round(int(offset)/10)+1} / {round(total/10)}", callback_data="pages"), InlineKeyboardButton("𝚗𝚎𝚡𝚝 >>", callback_data=f"next_{req}_{key}_{n_offset}"))
+        btn.append([InlineKeyboardButton(f"𝚙𝚊𝚐𝚎 \n{round(int(offset)/10)+1} / {round(total/10)}", callback_data="pages"), InlineKeyboardButton("𝚗𝚎𝚡𝚝 >>", callback_data=f"next_{req}_{key}_{n_offset}")])
     else:
         btn.append(
             [
