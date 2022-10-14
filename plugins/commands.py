@@ -47,8 +47,8 @@ async def start(client, message):
             ],[
             InlineKeyboardButton('× ᴄʟᴏꜱᴇ ᴍꜱɢ ×', callback_data='close_data')
         ]]
-        k = await message.reply_sticker('CAACAgUAAxkBAAEqRiNjPomDu86ZI2qy6FMNcqMgHZ1JvAACJwcAAq6S8FUnK-VwEVHHUB4E')
-        await asyncio.sleep(2)
+        k = await message.reply_text('ഞാന്, ഉണ്ണിമുകുന്, പൃഥ്രാജ്, അനൂപ് മേനോൻ. നമ്മൾ ഫ്രണ്ട്‌സ് സെറ്റപ്പിൽ തുടങ്ങിയ ബോട്ട് ആണ് ഇട്')
+        await asyncio.sleep(3)
         await k.delete()
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
