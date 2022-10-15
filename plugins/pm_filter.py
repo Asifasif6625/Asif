@@ -667,6 +667,9 @@ async def auto_filter(client, msg, spoll=False):
         cap = f"<b>⚠️ഹായ് {message.from_user.mention} നിങ്ങൾ ചോദിച്ച {search} മൂവി കോപ്പിറൈറ്റ് ഉള്ളത് കൊണ്ട് 5 മിനിറ്റ് ആകുമ്പോൾ ഓട്ടോമാറ്റിക് ആയി ഡിലീറ്റ് ആകും.\n protection by {message.chat.title}</b>"
     if imdb and imdb.get('poster'):
         try:
+            k = await message.reply_text('<b>ഞാൻ ബാല \nനിങ്ങള് മൂവി ചോയിച്ചു അല്ലേ..⏳️</b>')
+            await asyncio.sleep(3)
+            await k.delete()
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(1200)
             await hehe.delete()            
