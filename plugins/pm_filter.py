@@ -88,6 +88,9 @@ async def next_page(bot, query):
         btn.append(
             [InlineKeyboardButton("<< 𝚋𝚊𝚌𝚔", callback_data=f"next_{req}_{key}_{off_set}"), InlineKeyboardButton(f"𝚙𝚊𝚐𝚎 \n{round(int(offset)/10)+1} / {round(total/10)}", callback_data="pages")]
         )
+    btn.insert(0,
+            [InlineKeyboardButton(text="• 𝚓𝚘𝚒𝚗 𝚌𝚑𝚊𝚗𝚗𝚎𝚕 •",url="https://t.me/malayalamvibe")]
+        )
     elif off_set is None:
         btn.append([InlineKeyboardButton(f"𝚙𝚊𝚐𝚎 \n{round(int(offset)/10)+1} / {round(total/10)}", callback_data="pages"), InlineKeyboardButton("𝚗𝚎𝚡𝚝 >>", callback_data=f"next_{req}_{key}_{n_offset}")])
     else:
@@ -96,6 +99,9 @@ async def next_page(bot, query):
                 InlineKeyboardButton("<< 𝚋𝚊𝚌𝚔", callback_data=f"next_{req}_{key}_{off_set}"),
                 InlineKeyboardButton("𝚗𝚎𝚡𝚝 >>", callback_data=f"next_{req}_{key}_{n_offset}")
             ],
+        )
+        btn.insert(0,
+            [InlineKeyboardButton(text="• 𝚓𝚘𝚒𝚗 𝚌𝚑𝚊𝚗𝚗𝚎𝚕 •",url="https://t.me/malayalamvibe")]
         )
     try:
         await query.edit_message_reply_markup( 
@@ -630,7 +636,7 @@ async def auto_filter(client, msg, spoll=False):
         btn.append(
             [InlineKeyboardButton(text="• 𝚝𝚘𝚝𝚊𝚕 𝚙𝚊𝚐𝚎𝚜 •",callback_data="pages")]
         )
-    btn.insert(0,
+        btn.insert(0,
             [InlineKeyboardButton(text="• 𝚓𝚘𝚒𝚗 𝚌𝚑𝚊𝚗𝚗𝚎𝚕 •",url="https://t.me/malayalamvibe")]
         )
     imdb = await get_poster(search, file=(files[0]).file_name) if IMDB else None
