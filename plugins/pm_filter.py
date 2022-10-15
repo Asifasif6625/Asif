@@ -623,9 +623,15 @@ async def auto_filter(client, msg, spoll=False):
         btn.append(
             [InlineKeyboardButton(text=f"𝚙𝚊𝚐𝚎 \n1/{round(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="𝚗𝚎𝚡𝚝 >>",callback_data=f"next_{req}_{key}_{offset}")]
         )
+        btn.insert(0,
+            [InlineKeyboardButton(text="• 𝚓𝚘𝚒𝚗 𝚌𝚑𝚊𝚗𝚗𝚎𝚕 •",url="https://t.me/malayalamvibe")]
+        ) 
     else:
         btn.append(
             [InlineKeyboardButton(text="• 𝚝𝚘𝚝𝚊𝚕 𝚙𝚊𝚐𝚎𝚜 •",callback_data="pages")]
+        )
+    btn.insert(0,
+            [InlineKeyboardButton(text="• 𝚓𝚘𝚒𝚗 𝚌𝚑𝚊𝚗𝚗𝚎𝚕 •",url="https://t.me/malayalamvibe")]
         )
     imdb = await get_poster(search, file=(files[0]).file_name) if IMDB else None
     if imdb:
