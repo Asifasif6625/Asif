@@ -396,7 +396,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             )
 
     elif query.data == "pages":
-        await query.answer()
+        await query.answer("ദിസ്‌ ഈസ്‌ റാങ് 🙄", show_alert=True)
+    elif query.data == "reasonmovi":
+        await query.answer("⚠️ സിനിമ കിട്ടാത്തത് കൊണ്ടുള്ള Reasons \n\n● Google ചെയ്യു ഒറിജിനൽ പേര് തരൂ\n● സിനിമ റിലീസ് ആയികാണില്ല\n● സിനിമയുടെ പേര് മാത്രം തന്നാൽ കിട്ടും\n● ഡാറ്റബെസിൽ ഈ മൂവി കാണില്ല 😥", show_alert=True)
     elif query.data == "start":
         buttons = [[
             InlineKeyboardButton('•ᴀᴅᴅ ᴍᴇ ᴛᴏ yᴏᴜʀ ɢʀᴏᴜᴩ•\nᴀɴᴅ ᴇɴᴊᴏy', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
@@ -726,7 +728,11 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist)) # removing duplicates
     if not movielist:
-        k = await msg.reply("https://telegra.ph/file/5cc8c873a208f6e0cee99.jpg")
+        k = await msg.reply_text(
+            text = "plox check the reason 😪",
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton("🐿️ Reasons", callback_data="reasonmovi")]])    
+        )
         await asyncio.sleep(8)
         await k.delete()
         return
@@ -742,6 +748,8 @@ async def advantage_spell_chok(msg):
     await asyncio.sleep(200)
     await k.delete()
     return
+
+
 async def manual_filters(client, message, text=False):
     group_id = message.chat.id
     name = text or message.text
