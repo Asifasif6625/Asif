@@ -37,7 +37,7 @@ async def next_page(bot, query):
 
     ident, req, key, offset = query.data.split("_")
     if int(req) not in [query.from_user.id, 0]:
-        return await query.answer("😁 𝗛𝗲𝘆 𝗙𝗿𝗶𝗲𝗻𝗱,𝗣𝗹𝗲𝗮𝘀𝗲 𝗦𝗲𝗮𝗿𝗰𝗵 𝗬𝗼𝘂𝗿𝘀𝗲𝗹𝗳.", show_alert=True)
+        return await query.answer("ദിസ്‌ ഈസ്‌ റാങ്😜", show_alert=True)
     try:
         offset = int(offset)
     except:
@@ -625,6 +625,9 @@ async def auto_filter(client, msg, spoll=False):
         btn.append(
             [InlineKeyboardButton(text=f"𝚙𝚊𝚐𝚎 \n1/{round(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="𝚗𝚎𝚡𝚝 >>",callback_data=f"next_{req}_{key}_{offset}")]
         )
+        btn.insert(0,
+            [InlineKeyboardButton(text="• 𝚓𝚘𝚒𝚗 𝚌𝚑𝚊𝚗𝚗𝚎𝚕 •",url="https://t.me/malayalamvibe")]
+        )
     else:
         btn.append(
             [InlineKeyboardButton(text="• 𝚝𝚘𝚝𝚊𝚕 𝚙𝚊𝚐𝚎𝚜 •",callback_data="pages")]
@@ -676,17 +679,17 @@ async def auto_filter(client, msg, spoll=False):
             await asyncio.sleep(3)
             await k.delete()
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(200)
+            await asyncio.sleep(300)
             await hehe.delete()            
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
             hmm = await message.reply_photo('https://telegra.ph/file/5cc8c873a208f6e0cee99.jpg', caption=cap, reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(200)            
+            await asyncio.sleep(300)            
         except Exception as e:
             logger.exception(e)
-            fek = await message.reply_photo('https://telegra.ph/file/5cc8c873a208f6e0cee99.jpg', text=cap, disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(200)            
+            fek = await message.reply_text(text=cap, disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(btn))
+            await asyncio.sleep(300)            
     else:
         k = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
         await asyncio.sleep(200)
@@ -734,29 +737,29 @@ async def advantage_spell_chok(msg):
         cap = f"Hey {msg.from_user.mention}\n\nYour [[{msg.text}]] is wrong movie name please check the movie spelling on Google"
    
     if imdb:
-        nebut = [[InlineKeyboardButton(text=f"{imdb.get('title')}", url=imdb['url'])],[InlineKeyboardButton("🐿️ Reasons", callback_data="reasonmovi")]]
+        nebut = [[InlineKeyboardButton(text=f"🎞️{imdb.get('title')}🎞️", url=imdb['url'])],[InlineKeyboardButton("🐿️ Reasons", callback_data="reasonmovi")]]
     else:
         nebut = [[InlineKeyboardButton("🐿️ Reasons", callback_data="reasonmovi")]]
 
     if imdb and imdb.get('poster'):
         try:            
             hehe = await msg.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(nebut))
-            await asyncio.sleep(20)
+            await asyncio.sleep(300)
             await hehe.delete()            
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
             hmm = await msg.reply_photo(photo=poster, caption=cap, reply_markup=InlineKeyboardMarkup(nebut))
-            await asyncio.sleep(20)
+            await asyncio.sleep(300)
             await hmm.delete()           
         except Exception as e:
             logger.exception(e)
             fek = await msg.reply_text(text=cap, disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(nebut))
-            await asyncio.sleep(20) 
+            await asyncio.sleep(300) 
             await fek.delete()          
     else:
         k = await msg.reply_text(text=cap, reply_markup=InlineKeyboardMarkup(nebut))
-        await asyncio.sleep(20)
+        await asyncio.sleep(300)
         await k.delete()
 
    
