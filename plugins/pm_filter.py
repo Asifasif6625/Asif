@@ -748,7 +748,7 @@ async def advantage_spell_chok(msg):
     imdb = await get_poster(msg.text)
     if imdb:
         cap = SPELLCHECK_TEMP.format(
-            query = msg.text,
+            movie = msg.text,
             title = imdb['title'],
             votes = imdb['votes'],
             aka = imdb["aka"],
