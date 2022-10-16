@@ -7,7 +7,7 @@ from pyrogram.errors.exceptions.bad_request_400 import MediaEmpty, PhotoInvalidD
 from Script import script
 import pyrogram
 from database.connections_mdb import active_connection, all_connections, delete_connection, if_active, make_active, make_inactive
-from info import ADMINS, AUTH_CHANNEL, AUTH_USERS, CUSTOM_FILE_CAPTION, AUTH_GROUPS, P_TTI_SHOW_OFF, IMDB, SINGLE_BUTTON, SPELL_CHECK_REPLY, IMDB_TEMPLATE
+from info import ADMINS, AUTH_CHANNEL, AUTH_USERS, CUSTOM_FILE_CAPTION, AUTH_GROUPS, P_TTI_SHOW_OFF, IMDB, SINGLE_BUTTON, SPELL_CHECK_REPLY, IMDB_TEMPLATE, SPELLCHECK_TEMP
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait, UserIsBlocked, MessageNotModified, PeerIdInvalid
@@ -744,12 +744,71 @@ async def advantage_spell_chok(msg):
                 )
             ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    k = await msg.reply_photo('https://telegra.ph/file/db58c6b66dead7113cf7c.jpg', reply_markup=InlineKeyboardMarkup(btn))
-    await asyncio.sleep(200)
-    await k.delete()
-    return
+    
+    imdb = await get_poster(msg.text)
+    if imdb:
+        cap = SPELLCHECK_TEMP.format(
+            query = msg.text,
+            title = imdb['title'],
+            votes = imdb['votes'],
+            aka = imdb["aka"],
+            seasons = imdb["seasons"],
+            box_office = imdb['box_office'],
+            localized_title = imdb['localized_title'],
+            kind = imdb['kind'],
+            imdb_id = imdb["imdb_id"],
+            cast = imdb["cast"],
+            runtime = imdb["runtime"],
+            countries = imdb["countries"],
+            certificates = imdb["certificates"],
+            languages = imdb["languages"],
+            director = imdb["director"],
+            writer = imdb["writer"],
+            producer = imdb["producer"],
+            composer = imdb["composer"],
+            cinematographer = imdb["cinematographer"],
+            music_team = imdb["music_team"],
+            distributors = imdb["distributors"],
+            release_date = imdb['release_date'],
+            year = imdb['year'],
+            genres = imdb['genres'],
+            poster = imdb['poster'],
+            plot = imdb['plot'],
+            rating = imdb['rating'],
+            url = imdb['url'],
+            **locals()
+        )
+    else:        
+        cap = f"Hey {msg.from_user.mention}\n\nYour [[{msg.text}]] is wrong movie name please check the movie spelling on Google"
+   
+    if imdb:
+        nebut = [[InlineKeyboardButton(text=f"{imdb.get('title')}", url=imdb['url'])],[InlineKeyboardButton("🔘 REASONS 🔘", callback_data="reasonmovi")]]
+    else:
+        nebut = [[InlineKeyboardButton("🔘 REASONS 🔘", callback_data="reasonmovi")]]
 
+    if imdb and imdb.get('poster'):
+        try:            
+            hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(nebut))
+            await asyncio.sleep(20)
+            await hehe.delete()            
+        except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
+            pic = imdb.get('poster')
+            poster = pic.replace('.jpg', "._V1_UX360.jpg")
+            hmm = await msg.reply_photo(photo=poster, caption=cap, reply_markup=InlineKeyboardMarkup(nebut))
+            await asyncio.sleep(20)
+            await hmm.delete()           
+        except Exception as e:
+            logger.exception(e)
+            fek = await msg.reply_text(text=cap, disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(nebut))
+            await asyncio.sleep(20) 
+            await fek.delete()          
+    else:
+        k = await msg.reply_text(cap, reply_markup=InlineKeyboardMarkup(nebut))
+        await asyncio.sleep(20)
+        await k.delete()
+    
 
+   
 async def manual_filters(client, message, text=False):
     group_id = message.chat.id
     name = text or message.text
