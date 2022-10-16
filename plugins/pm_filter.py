@@ -745,7 +745,7 @@ async def advantage_spell_chok(msg):
             ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
     
-    imdb = imdb_s
+    imdb = movielist[0]
     if imdb:
         cap = SPELLCHECK_TEMP.format(
             movie = msg.text,
