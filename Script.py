@@ -1,13 +1,14 @@
 class script(object):
-    START_TXT = """hí {} вrσ 🌹
-í αm вєѕt αutσ fíltєr вσt 😊"""
-    HELP_TXT = """hí {} вrσ 🌹"""
+    START_TXT = """I Aɱ Bҽʂƚ Aυƚσ Fιʅƚҽɾ Bσƚ Iɳ Tҽʅҽɠɾαɱ . I Aɱ Pɾσʋιԃιɳɠ Mσʋιҽʂ , Mαʅαყαʅαɱ , Tαɱιʅ , Kαɳɳαԃα , Tҽʅυɠυ, Hιɳԃι Aɳԃ Eɳɠʅιʂԋ ʅαɳɠυαɠҽ Mσʋιҽʂ AʋαιʅαႦʅҽ Tԋιʂ Bσƚ.
+Aɳԃ ƚԋҽɾҽ'ʂ α ʅσƚ σϝ υρԃαƚҽʂ ƈσɱιɳɠ σɳ ƚԋιʂ Ⴆσαƚ. 
+Tԋҽ ɳҽxƚ ƚԋιɳɠ ყσυ ɠҽƚ ɳσɯ ιʂ ƚԋαƚ ιϝ ყσυ ԃσɳ'ƚ ԋαʋҽ ƚԋҽ ɱσʋιҽ ԃαƚαႦαʂҽ, ყσυ'ʅʅ Ⴆҽ ʂԋσɯɳ ιɱԃႦ ρσʂƚҽɾ αɳԃ ɾҽαʂσɳ'ʂ αʂ α ɾҽʂυʅƚ ιɳ ƚԋҽ ɠɾσυρ. I'ʋҽ αʅʂσ αԃԃҽԃ α ϝυɳɳყ ɱҽʂʂαɠҽ. Aԃԃ ƚԋιʂ Ⴆσƚ ƚσ ყσυɾ ɠɾσυρ. Nҽɯ αɳԃ σʅԃ ɱσʋιҽʂ αƚ ƚԋҽ ϝιɳɠҽɾƚιρʂ"""
+    HELP_TXT = """check buttons by help"""
     ABOUT_TXT = """• my name: {}
-• creaters: <a href=https://t.me/Abhisheksvlog>༒ᶜʳᵃᶻʸᴮᴼˢˢ卂乃卄丨丂卄乇Ҝ༒</a> and <a href=https://t.me/malayalamvibead>𝓐𝓼𝓲𝓯 𝓹𝓶𝓷🤠</a>
+• creaters: <a href=https://t.me/malayalamvibead>𝓐𝓼𝓲𝓯 𝓹𝓶𝓷🤠</a>
 • library: program 
 • language: Python 𝟹
 • data Base: mangoDB
-• bot server: 💋"""
+• bot server: Nil"""
 
     PRIVATEBOT_TXT = """<b>ഞാൻ ബാല എന്താണ് സ്റ്റാർട്ട്‌ അടിച്ച് കളിക്കണ്
 ദിസ്‌ ഈസ്‌ റാങ്..🪝</b>"""
@@ -122,4 +123,4 @@ This module only works for my OᗯᑎEᖇ⚡
 <b>/carbon ›› 𝚁𝙴𝙿𝙻𝚈 𝚃𝙾 𝙰𝙽𝚈 𝚃𝙴𝚇𝚃 𝙼𝙴𝚂𝚂𝙰𝙶𝙴</b>
 
 <b>𝚆𝙾𝚁𝙺𝚂 𝙾𝙽 𝙱𝙾𝚃𝙷 𝙶𝚁𝙾𝚄𝙿 𝙰𝙽𝙳 𝙿𝙼</b>
-<b>𝙲𝚁𝙴𝙳𝙸𝚃𝚂 ››</b> <a href=https://youtube.com/channel/UCf_dVNrilcT0V2R--HbYpMA>𝙾𝙿𝚄𝚂-𝚃𝙴𝙲𝙷𝚉</a></b>"""
+<b>𝙲𝚁𝙴𝙳𝙸𝚃𝚂 ›› @malayalamvibe"""
