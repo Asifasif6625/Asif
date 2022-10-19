@@ -734,7 +734,7 @@ async def advantage_spell_chok(msg):
             **locals()
         )
     else:        
-        cap = f"Hey {msg.from_user.mention}\n\nYour [[{msg.text}]] is wrong movie name \n\n [[{imdb.get('title')}]] this is orginal movie name or please check the movie spelling on Google"
+        cap = f"Search for reasons I could not find 😢"
    
     if imdb:
         nebut = [[InlineKeyboardButton(text=f"🎞️{imdb.get('title')}🎞️", url=imdb['url'])],[InlineKeyboardButton("🐿️ Reasons", callback_data="reasonmovi")]]
