@@ -47,7 +47,7 @@ async def start(client, message):
             ],[
             InlineKeyboardButton('× ᴄʟᴏꜱᴇ ᴍꜱɢ ×', callback_data='close_data')
         ]]
-        k = await message.reply_text('**ഞാന്, ഉണ്ണിമുകുന്, പൃഥ്രാജ്, അനൂപ് മേനോൻ. നമ്മൾ ഫ്രണ്ട്‌സ് സെറ്റപ്പിൽ തുടങ്ങിയ ബോട്ട് ആണ് ഇത്**')
+        k = await message.reply_photo('https://telegra.ph/file/bf13a0d161110e91d11f5.jpg')
         await asyncio.sleep(4)
         await k.delete()
         reply_markup = InlineKeyboardMarkup(buttons)
