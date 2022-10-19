@@ -75,10 +75,9 @@ async def start(client, message):
         if message.command[1] != "subscribe":
             btn.append([InlineKeyboardButton("• ᕼY ᗷᖇO TᖇY ᗩGᗩIᑎ •", callback_data=f"checksub#{message.command[1]}")])
         await message.reply_photo('https://telegra.ph/file/684c2e364354bbd6a91e2.jpg') 
-        await message.reply_text('**join channel and try again @malayalamvibe**') 
         await client.send_message(
             chat_id=message.from_user.id,
-            text="‎ ",
+            text="click the button and join channel",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode="markdown"
             )
