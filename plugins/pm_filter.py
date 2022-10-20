@@ -691,7 +691,7 @@ async def auto_filter(client, msg, spoll=False):
             fek = await message.reply_photo('https://telegra.ph/file/46328518b95198c73f0d5.jpg', text=cap, disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(1100)            
     else:
-        k = await message.reply_photo('https://telegra.ph/file/46328518b95198c73f0d5.jpg', text=cap, reply_markup=InlineKeyboardMarkup(btn))
+        k = await message.reply_photo('https://telegra.ph/file/46328518b95198c73f0d5.jpg', caption=cap, reply_markup=InlineKeyboardMarkup(btn))
         await asyncio.sleep(1100)
         await k.delete()
     if spoll:
