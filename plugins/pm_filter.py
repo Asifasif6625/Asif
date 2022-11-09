@@ -669,7 +669,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        k = await message.reply_text('<b>ഞാൻ ബാല \nനിങ്ങള് മൂവി ചോയിച്ചു അല്ലേ..⏳️</b>')
+        k = await message.reply_sticker(CAACAgIAAxkBAAE9AWxja0XS6aLCnvE5cJj3olNKSnqxWAACLAADDbbSGfqU-_oDmZT8HgQ)
         await asyncio.sleep(3)
         await k.delete()    
         cap = f"<b>⚠️ഹായ് {message.from_user.mention} നിങ്ങൾ ചോദിച്ച {search} മൂവി കോപ്പിറൈറ്റ് ഉള്ളത് കൊണ്ട് 5 മിനിറ്റ് ആകുമ്പോൾ ഓട്ടോമാറ്റിക് ആയി ഡിലീറ്റ് ആകും.\n protection by {message.chat.title}</b>"
