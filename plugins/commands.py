@@ -47,7 +47,7 @@ async def start(client, message):
             ],[
             InlineKeyboardButton('× ᴄʟᴏꜱᴇ ᴍꜱɢ ×', callback_data='close_data')
         ]]
-        k = await message.reply_photo('https://telegra.ph/file/bf13a0d161110e91d11f5.jpg')
+        k = await message.reply_text("<b>.... JOIN CHANNEL....</b>\n\n@malayalamvibe")
         await asyncio.sleep(4)
         await k.delete()
         reply_markup = InlineKeyboardMarkup(buttons)
