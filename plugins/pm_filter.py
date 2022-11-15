@@ -59,7 +59,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"• {get_size(file.file_size)} •\n{file.file_name}", callback_data=f'files#{file.file_id}'
+                    text=f"📍{get_size(file.file_size)}🍭{file.file_name}", callback_data=f'files#{file.file_id}'
                 ),
             ]
             for file in files
@@ -598,7 +598,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"• {get_size(file.file_size)} •\n{file.file_name}", callback_data=f'files#{file.file_id}'
+                    text=f"📍{get_size(file.file_size)}🍭{file.file_name}", callback_data=f'files#{file.file_id}'
                 ),
             ]
             for file in files
@@ -672,24 +672,24 @@ async def auto_filter(client, msg, spoll=False):
         cap = f"<b>⚠️ഹായ് {message.from_user.mention} നിങ്ങൾ ചോദിച്ച {search} മൂവി കോപ്പിറൈറ്റ് ഉള്ളത് കൊണ്ട് 5 മിനിറ്റ് ആകുമ്പോൾ ഓട്ടോമാറ്റിക് ആയി ഡിലീറ്റ് ആകും.\n protection by {message.chat.title}</b>"
     if imdb and imdb.get('poster'):
         try:
-            k = await message.reply_text('<b>ഞാൻ ബാല \nനിങ്ങള് മൂവി ചോയിച്ചു അല്ലേ..⏳️</b>')
-            await asyncio.sleep(3)
+            k = await message.reply_text('<b>loading IMDb🪐</b>')
+            await asyncio.sleep(2)
             await k.delete()
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(1100)
+            await asyncio.sleep(9100)
             await hehe.delete()            
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
             hmm = await message.reply_photo('https://telegra.ph/file/46328518b95198c73f0d5.jpg', caption=cap, reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(1100)            
+            await asyncio.sleep(9100)            
         except Exception as e:
             logger.exception(e)
             fek = await message.reply_photo('https://telegra.ph/file/46328518b95198c73f0d5.jpg', text=cap, disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(1100)            
+            await asyncio.sleep(9100)            
     else:
         k = await message.reply_photo('https://telegra.ph/file/46328518b95198c73f0d5.jpg', caption=cap, reply_markup=InlineKeyboardMarkup(btn))
-        await asyncio.sleep(1100)
+        await asyncio.sleep(9100)
         await k.delete()
     if spoll:
         await msg.message.delete()
@@ -741,22 +741,22 @@ async def advantage_spell_chok(msg):
     if imdb and imdb.get('poster'):
         try:            
             hehe = await msg.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(nebut))
-            await asyncio.sleep(800)
+            await asyncio.sleep(5800)
             await hehe.delete()            
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
             hmm = await msg.reply_photo(photo=poster, caption=cap, reply_markup=InlineKeyboardMarkup(nebut))
-            await asyncio.sleep(800)
+            await asyncio.sleep(5800)
             await hmm.delete()           
         except Exception as e:
             logger.exception(e)
             fek = await msg.reply_text(text=cap, disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(nebut))
-            await asyncio.sleep(800) 
+            await asyncio.sleep(5800) 
             await fek.delete()          
     else:
         k = await msg.reply_text(text=cap, reply_markup=InlineKeyboardMarkup(nebut))
-        await asyncio.sleep(800)
+        await asyncio.sleep(5800)
         await k.delete()
 
    
