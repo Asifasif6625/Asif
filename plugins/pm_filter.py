@@ -681,14 +681,14 @@ async def auto_filter(client, msg, spoll=False):
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
-            hmm = await message.reply_photo('https://telegra.ph/file/46328518b95198c73f0d5.jpg', caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+            hmm = await message.reply_photo('https://telegra.ph/file/b7a04bed336187880275e.jpg', caption=cap, reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(9100)            
         except Exception as e:
             logger.exception(e)
-            fek = await message.reply_photo('https://telegra.ph/file/46328518b95198c73f0d5.jpg', text=cap, disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(btn))
+            fek = await message.reply_photo('https://telegra.ph/file/b7a04bed336187880275e.jpg', text=cap, disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(9100)            
     else:
-        k = await message.reply_photo('https://telegra.ph/file/46328518b95198c73f0d5.jpg', caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+        k = await message.reply_photo('https://telegra.ph/file/b7a04bed336187880275e.jpg', caption=cap, reply_markup=InlineKeyboardMarkup(btn))
         await asyncio.sleep(9100)
         await k.delete()
     if spoll:
