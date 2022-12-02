@@ -731,7 +731,7 @@ async def advantage_spell_chok(msg):
             **locals()
         )
     else:        
-        cap = f"Search for reasons I could not find 😢 \n\n🎀NB:- മൂവി നെയിം ശെരി ആണോ എന്ന് ഒന്ന് ചെക്ക് ചയ്യുക സെർച്ച്‌ ഗൂഗിൾ."
+        cap = f"Search for reasons I could not find 😢 \n\n🎀NB:- മൂവി നെയിം ശെരി ആണോ എന്ന് ഒന്ന് ചെക്ക് ചയ്യുക സെർച്ച്‌ ഗൂഗിൾ. Or click reasons button."
    
     if imdb:
         nebut = [[InlineKeyboardButton(text=f"🎞️{imdb.get('title')}🎞️", url=imdb['url'])],[InlineKeyboardButton("🐿️ Reasons", callback_data="reasonmovi")]]
