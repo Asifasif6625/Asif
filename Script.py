@@ -9,7 +9,7 @@ Tԋҽ ɳҽxƚ ƚԋιɳɠ ყσυ ɠҽƚ ɳσɯ ιʂ ƚԋαƚ ιϝ ყσυ ԃσɳ
 • language: Python 𝟹
 • data Base: mangoDB
 • bot server: Nil"""
-    MV_TXT = """<b>channels link uploading soon!</b>"""
+    MV_TXT = """<b>⊳ channel 1 https://t.me/+bEiUvBpP9dEwMDM1 \n⊳ channel link 2 https://t.me/+ObQLgYTfvkwyZWE9</b>"""
     PRIVATEBOT_TXT = """<b>ഞാൻ ബാല എന്താണ് സ്റ്റാർട്ട്‌ അടിച്ച് കളിക്കണ്
 ദിസ്‌ ഈസ്‌ റാങ്..🪝</b>"""
 
