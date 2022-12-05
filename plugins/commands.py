@@ -97,6 +97,8 @@ async def start(client, message):
             InlineKeyboardButton('• ʀᴇqᴜꜱᴛ ɢʀᴏᴜᴩ • ', url='https://t.me/+dezh9OsvdKk1OTRl'),
             InlineKeyboardButton('• ᴩᴍ ᴏᴡɴʀ •', url='https://t.me/malayalamvibead')
             ],[
+            InlineKeyboardButton('• ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟꜱ •', callback_data='mvmovie')
+            ],[
             InlineKeyboardButton('× ᴄʟᴏꜱᴇ ᴍꜱɢ ×', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
