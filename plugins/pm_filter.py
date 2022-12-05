@@ -399,8 +399,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer("ദിസ്‌ ഈസ്‌ റാങ് 🙄", show_alert=True)
     elif query.data == "reasonmovi":
         await query.answer("⚠️ സിനിമ കിട്ടാത്തത് കൊണ്ടുള്ള Reasons \n\n● Google ചെയ്യു ഒറിജിനൽ പേര് തരൂ\n● സിനിമ റിലീസ് ആയികാണില്ല\n● സിനിമയുടെ പേര് മാത്രം തന്നാൽ കിട്ടും\n● ഡാറ്റബെസിൽ ഈ മൂവി കാണില്ല 😥", show_alert=True)
-    elif query.data == "mvmovie":
-        await quety.answer("🥴 ʟɪɴᴋ ᴜᴩʟᴏᴅɪɴɢ ꜱᴏᴏɴ!", show_alert=True)
     elif query.data == "start":
         buttons = [[
             InlineKeyboardButton('•ᴀᴅᴅ ᴍᴇ ᴛᴏ yᴏᴜʀ ɢʀᴏᴜᴩ•\nᴀɴᴅ ᴇɴᴊᴏy', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
@@ -450,6 +448,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🅿︎🅼︎', url='t.me/malayalamvibead')
             ],[
             InlineKeyboardButton('• ʜᴏᴍᴇ •', callback_data='start'),
+            InlineKeyboardButton('× ᴄʟᴏꜱᴇ ᴍꜱɢ ×', callback_data='close_data')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.ABOUT_TXT.format(temp.B_NAME),
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "mvmovie":
+        buttons= [[
             InlineKeyboardButton('× ᴄʟᴏꜱᴇ ᴍꜱɢ ×', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
