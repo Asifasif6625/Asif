@@ -417,10 +417,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('× ᴄʟᴏꜱᴇ ᴍꜱɢ ×', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        k = await message.reply_photo('https://telegra.ph/file/78f3d720291089608de70.jpg')
-        await k.delete()     
+        k = await message.reply_photo('https://telegra.ph/file/78f3d720291089608de70.jpg')  
         i = await message.reply_text(" hi i am auto filter bot, add me your groups \n ഞാൻ മലയാളം വൈബ്ന്റെ ഗ്രൂപ്പിൽ ആണ് വർക്ക്‌ ചെയ്യുന്നത് നിങ്ങൾക്കും എന്നെ നിങ്ങളുടെ ഗ്രൂപ്പിൽ ആഡ് ചെയ്യാം.. ")
-        await i.delete()   
+  
     elif query.data == "help":
         buttons = [[
             InlineKeyboardButton('• ᴍᴀɴᴜᴇʟ ꜰɪʟᴛᴇʀ •', callback_data='manuelfilter'),
