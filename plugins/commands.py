@@ -50,9 +50,10 @@ async def start(client, message):
             InlineKeyboardButton('× ᴄʟᴏꜱᴇ ᴍꜱɢ ×', callback_data='close_data')
         ]]
         k = await message.reply_photo('https://telegra.ph/file/78f3d720291089608de70.jpg')        
-        i = await message.reply_text(" hi i am auto filter bot, add me your groups \n ഞാൻ മലയാളം വൈബ്ന്റെ ഗ്രൂപ്പിൽ ആണ് വർക്ക്‌ ചെയ്യുന്നത് നിങ്ങൾക്കും എന്നെ നിങ്ങളുടെ ഗ്രൂപ്പിൽ ആഡ് ചെയ്യാം.. ",
+        i = await message.reply_text(
+        text=" hi i am auto filter bot, add me your groups \n ഞാൻ മലയാളം വൈബ്ന്റെ ഗ്രൂപ്പിൽ ആണ് വർക്ക്‌ ചെയ്യുന്നത് നിങ്ങൾക്കും എന്നെ നിങ്ങളുടെ ഗ്രൂപ്പിൽ ആഡ് ചെയ്യാം.. ",
         reply_markup = InlineKeyboardMarkup(buttons),
-        perse_mode="markdown"
+        perse_mode="html"
         )
         return
     if AUTH_CHANNEL and not await is_subscribed(client, message):
@@ -97,9 +98,10 @@ async def start(client, message):
             InlineKeyboardButton('× ᴄʟᴏꜱᴇ ᴍꜱɢ ×', callback_data='close_data')
         ]]
         k = await message.reply_photo('https://telegra.ph/file/78f3d720291089608de70.jpg')
-        i = await message.reply_text(" hi i am auto filter bot, add me your groups \n ഞാൻ മലയാളം വൈബ്ന്റെ ഗ്രൂപ്പിൽ ആണ് വർക്ക്‌ ചെയ്യുന്നത് നിങ്ങൾക്കും എന്നെ നിങ്ങളുടെ ഗ്രൂപ്പിൽ ആഡ് ചെയ്യാം.. ",
+        i = await message.reply_text(
+        text=" hi i am auto filter bot, add me your groups \n ഞാൻ മലയാളം വൈബ്ന്റെ ഗ്രൂപ്പിൽ ആണ് വർക്ക്‌ ചെയ്യുന്നത് നിങ്ങൾക്കും എന്നെ നിങ്ങളുടെ ഗ്രൂപ്പിൽ ആഡ് ചെയ്യാം.. ",
         reply_markup = InlineKeyboardMarkup(buttons),
-        perse_mode="markdown"
+        perse_mode="html"
         ) 
         return
     file_id = message.command[1]
