@@ -8,7 +8,7 @@ from pyrogram.errors.exceptions.bad_request_400 import ChatAdminRequired
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from database.ia_filterdb import Media, get_file_details, unpack_new_file_id
 from database.users_chats_db import db
-from info import CHANNELS, ADMINS, AUTH_CHANNEL, CUSTOM_FILE_CAPTION, LOG_CHANNEL, PICS
+from info import CHANNELS, ADMINS, AUTH_CHANNEL, CUSTOM_FILE_CAPTION, LOG_CHANNEL
 from utils import get_size, is_subscribed, temp
 import re
 logger = logging.getLogger(__name__)
@@ -49,15 +49,12 @@ async def start(client, message):
             ],[
             InlineKeyboardButton('× ᴄʟᴏꜱᴇ ᴍꜱɢ ×', callback_data='close_data')
         ]]
-        k = await message.reply_text("<b>.... JOIN CHANNEL....</b>\n\n@malayalamvibe")
-        await asyncio.sleep(4)
+        k = await message.reply_photo(https://telegra.ph/file/78f3d720291089608de70.jpg)
         await k.delete()
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_photo(
-            photo=random.choice(PICS),
-            caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
-            reply_markup=reply_markup,
-            parse_mode='html'
+        reply_markup = InlineKeyboardMarkup(buttons)      
+        k = await message.reply_text(" hi i am auto filter bot, add me your groups \n ഞാൻ മലയാളം വൈബ്ന്റെ ഗ്രൂപ്പിൽ ആണ് വർക്ക്‌ ചെയ്യുന്നത് നിങ്ങൾക്കും എന്നെ നിങ്ങളുടെ ഗ്രൂപ്പിൽ ആഡ് ചെയ്യാം.. ")
+        await k.delete()   
+  
         )
         return
     if AUTH_CHANNEL and not await is_subscribed(client, message):
