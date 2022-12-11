@@ -49,6 +49,7 @@ async def start(client, message):
             ],[
             InlineKeyboardButton('× ᴄʟᴏꜱᴇ ᴍꜱɢ ×', callback_data='close_data')
         ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
         k = await message.reply_photo(https://telegra.ph/file/78f3d720291089608de70.jpg)
         await k.delete()
         reply_markup = InlineKeyboardMarkup(buttons)      
