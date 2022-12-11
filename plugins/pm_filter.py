@@ -416,14 +416,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ],[
             InlineKeyboardButton('× ᴄʟᴏꜱᴇ ᴍꜱɢ ×', callback_data='close_data')
         ]]
-        k = await message.reply_text("<b>.... JOIN CHANNEL....</b>\n\n@malayalamvibe")
+        k = await message.reply_photo("<b>.... JOIN CHANNEL....</b>\n\n@malayalamvibe")
         await asyncio.sleep(4)
         await k.delete()
         reply_markup = InlineKeyboardMarkup(buttons)      
-        await query.message.edit_text(
-            text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
-            reply_markup=reply_markup,
-            parse_mode='html'
+        k = await message.reply_text(" hi i am auto filter bot, add me your groups \n ഞാൻ മലയാളം വൈബ്ന്റെ ഗ്രൂപ്പിൽ ആണ് വർക്ക്‌ ചെയ്യുന്നത് നിങ്ങൾക്കും എന്നെ നിങ്ങളുടെ ഗ്രൂപ്പിൽ ആഡ് ചെയ്യാം.. ")
+            
+  
         )
     elif query.data == "help":
         buttons = [[
