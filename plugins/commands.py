@@ -49,12 +49,9 @@ async def start(client, message):
             ],[
             InlineKeyboardButton('× ᴄʟᴏꜱᴇ ᴍꜱɢ ×', callback_data='close_data')
         ]]
-        k = await message.reply_sticker('CAACAgUAAxkBAAFQugZjljfTbpMqv3URl32KSUoI8DnqOgAChAMAAhvk4FR9Mz84cjkiIR4E')
+        k = await message.reply_sticker('CAACAgIAAxkBAAFV3LNjoh4YqlNOlJXuQ2-Jovw-PlHdVQACgQADMNSdEfAWO6e-XIejHgQ')
         reply_markup = InlineKeyboardMarkup(buttons)       
-        i = await message.reply_text(
-        text=" hi i am auto filter bot, add me your groups \n ഞാൻ മലയാളം വൈബ്ന്റെ ഗ്രൂപ്പിൽ ആണ് വർക്ക്‌ ചെയ്യുന്നത് നിങ്ങൾക്കും എന്നെ നിങ്ങളുടെ ഗ്രൂപ്പിൽ ആഡ് ചെയ്യാം.. ",
-        perse_mode="html"
-        )
+        i = await message.reply_text("<b><t>hi i am auto filter bot, add me your groups \n ഞാൻ മലയാളം വൈബ്ന്റെ ഗ്രൂപ്പിൽ ആണ് വർക്ക്‌ ചെയ്യുന്നത് നിങ്ങൾക്കും എന്നെ നിങ്ങളുടെ ഗ്രൂപ്പിൽ ആഡ് ചെയ്യാം..</t></b>")
         return
     if AUTH_CHANNEL and not await is_subscribed(client, message):
         try:
@@ -97,12 +94,9 @@ async def start(client, message):
             ],[
             InlineKeyboardButton('× ᴄʟᴏꜱᴇ ᴍꜱɢ ×', callback_data='close_data')
         ]]
-        k = await message.reply_sticker('CAACAgUAAxkBAAFQugZjljfTbpMqv3URl32KSUoI8DnqOgAChAMAAhvk4FR9Mz84cjkiIR4E')
-        reply_markup = InlineKeyboardMarkup(buttons)
-        i = await message.reply_text(
-        text=" hi i am auto filter bot, add me your groups \n ഞാൻ മലയാളം വൈബ്ന്റെ ഗ്രൂപ്പിൽ ആണ് വർക്ക്‌ ചെയ്യുന്നത് നിങ്ങൾക്കും എന്നെ നിങ്ങളുടെ ഗ്രൂപ്പിൽ ആഡ് ചെയ്യാം.. ",
-        perse_mode="html"
-        ) 
+        k = await message.reply_sticker('CAACAgIAAxkBAAFV3LNjoh4YqlNOlJXuQ2-Jovw-PlHdVQACgQADMNSdEfAWO6e-XIejHgQ')
+        reply_markup = InlineKeyboardMarkup(buttons)       
+        i = await message.reply_text("<b><t>hi i am auto filter bot, add me your groups \n ഞാൻ മലയാളം വൈബ്ന്റെ ഗ്രൂപ്പിൽ ആണ് വർക്ക്‌ ചെയ്യുന്നത് നിങ്ങൾക്കും എന്നെ നിങ്ങളുടെ ഗ്രൂപ്പിൽ ആഡ് ചെയ്യാം..</t></b>") 
         return
     file_id = message.command[1]
     files_ = await get_file_details(file_id)
